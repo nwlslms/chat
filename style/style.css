@@ -1,0 +1,279 @@
+body {
+  font-family: sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.chat-container {
+  width: 420px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-window {
+  height: 320px;
+  overflow-y: auto;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.message {
+  margin-bottom: 12px;
+  background: #e1f5fe;
+  padding: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.chat-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.chat-form input[type="text"] {
+  flex: 1 1 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.chat-form input[type="file"] {
+  flex: 1 1 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.chat-form button {
+  flex: 1 1 100%;
+  padding: 10px;
+  background: #1080f2;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.chat-form button:hover {
+  background: #0a6bd9;
+}
+
+.typing-indicator {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #f0f0f0;
+  font-style: italic;
+  border-radius: 8px;
+  color: #666;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.online-users {
+  padding: 10px;
+  font-size: 14px;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  color: #444;
+  text-align: center;
+}
+
+.notification-control {
+  padding: 10px;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.notif-button {
+  padding: 10px 20px;
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.notif-button:hover {
+  background-color: #e65100;
+}
+
+.reply-ref {
+  font-size: 13px;
+  background: #fff3e0;
+  padding: 6px;
+  border-left: 3px solid #ffa000;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  color: #555;
+}
+
+/* ✅ Gambar di chat */
+.chat-image {
+  max-width: 140px;
+  max-height: 120px;
+  border-radius: 6px;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.chat-image:hover {
+  transform: scale(1.05);
+}
+
+.chat-video,
+.chat-audio {
+  max-width: 160px;
+  max-height: 120px;
+  margin-top: 8px;
+  border-radius: 6px;
+  outline: none;
+  object-fit: cover;
+}
+
+.chat-video {
+  background-color: #000;
+  transition: transform 0.2s ease;
+}
+
+.chat-video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+.chat-audio::-webkit-media-controls-panel,
+.chat-video::-webkit-media-controls-panel {
+  background-color: #f0f0f0;
+}
+
+.message button {
+  margin-top: 6px;
+  padding: 6px 14px;
+  background-color: #ffd54f;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.3s ease;
+}
+
+.message button:hover {
+  background-color: #ffca28;
+}
+
+.reply-thumb {
+  max-width: 120px;
+  max-height: 120px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  border-radius: 6px;
+}
+
+.gallery-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.gallery-button:hover {
+  background-color: #45a049;
+}
+
+.user-status {
+  margin-top: 2px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+.user-status div {
+  margin-bottom: 2px;
+}
+
+@media (max-width: 500px) {
+  .chat-container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .chat-window {
+    height: 60vh;
+    padding: 16px;
+  }
+
+  .chat-form {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .chat-form input[type="text"],
+  .chat-form input[type="file"],
+  .chat-form button {
+    font-size: 16px;
+  }
+
+  .chat-image {
+    max-width: 120px;
+    max-height: 100px;
+  }
+
+  .chat-video,
+  .chat-audio {
+    max-width: 120px;
+    max-height: 100px;
+  }
+
+  .message {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .typing-indicator {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .online-users,
+  .notification-control {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .notif-button {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .message button {
+    width: auto;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
