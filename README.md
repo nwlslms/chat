@@ -24,5 +24,6 @@ Because of that, this website isn’t licensed under any copyright, and I’ve c
     "sil123": "sil"
     // and so on
   }
+  '''
 - Tip: Improve the online status display in 'style.css' to handle more than 3 users without layout issues.
 - Once configured, the website is ready to use
