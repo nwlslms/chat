@@ -18,11 +18,11 @@ Because of that, this website isn’t licensed under any copyright, and I’ve c
 # SETUP
 
 - Upload all project files to your hosting server
-- In ' user_code.json ', add users who are allowed to access the chat. Example:
+- In ' user_code.json, add users who are allowed to access the chat. Example:
   ''' json
   {
     "sil123": "sil"
     // and so on
-  } '''
-- Tip: Improve the online status display in ' style.css ' to handle more than 3 users without layout issues.
+  }
+- Tip: Improve the online status display in ' style.css to handle more than 3 users without layout issues.
 - Once configured, the website is ready to use
