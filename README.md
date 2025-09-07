@@ -13,11 +13,11 @@ Built-in notification feature to alert users of new messages or activity
 
 # SETUP 💼
 - Clone this repository:
-```
-git-bash
-git init
-git clone https://github.com/nwlslms/online-chat
-```
+ ```
+    git-bash
+    git init
+    git clone https://github.com/nwlslms/online-chat
+ ```
  Or you can download the file and move it to your hosting file.
 - Open `user_code.json` and define the list of authorized users in the following format:
   ```
