@@ -2,7 +2,7 @@
 session_start();
 date_default_timezone_set("Asia/Jakarta");
 
-$kodeMap = file_exists("kode_user.json") ? json_decode(file_get_contents("kode_user.json"), true) : [];
+$kodeMap = file_exists("user_code.json") ? json_decode(file_get_contents("user_code.json"), true) : [];
 
 if (!isset($_SESSION["username"]) && isset($_POST["kode"])) {
   $kode = trim($_POST["kode"]);
@@ -141,13 +141,6 @@ $messages = file_exists("messages.txt") ? file("messages.txt") : [];
         <p>Loading...</p>
       </div>
     </div>
-
-    <div class="notification-control">
-      <form method="POST" action="trigger_send.php">
-        <button type="submit" class="notif-button">Send notification</button>
-      </form>
-    </div>
-
     <div class="gallery-control">
       <form method="GET" action="gallery.php">
         <button type="submit" class="gallery-button">Gallery</button>

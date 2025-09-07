@@ -2,8 +2,7 @@
 $file = "active_users.json";
 $users = file_exists($file) ? json_decode(file_get_contents($file), true) : [];
 $now = time();
-
-$display = ["sil", "her"];
+$display = array_keys($users);
 $statusHtml = "";
 
 foreach ($display as $name) {
