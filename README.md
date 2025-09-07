@@ -14,7 +14,7 @@ Built-in notification feature to alert users of new messages or activity
 # SETUP 💼
 - Clone this repository:
  ```
-    git-bash
+    _git-bash_
     git init
     git clone https://github.com/nwlslms/online-chat
  ```
@@ -23,7 +23,7 @@ Built-in notification feature to alert users of new messages or activity
   ```
   {
     "PASSWORD": "USERNAME"
-    //and so on
+    _//and so on_
   }
   ```
 - Once configured, the website is ready to use!
